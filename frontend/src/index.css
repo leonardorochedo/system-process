@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: grey;
+  overflow: hidden;
 }
 
 .container {
@@ -18,7 +18,7 @@ body {
 
 /* Button */
 .button {
-  background-color: grey;
+  background-color: blue;
   color: white;
   border: none;
   /* border-radius: 15px; */
@@ -41,7 +41,7 @@ body {
   background-color: white;
 
   width: 25em;
-  /* height: 15em; */
+  height: 20em;
 
   display: flex;
   flex-direction: column;

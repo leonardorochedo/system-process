@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './RegisterPage.css';
-
 export function RegisterPage() {
     return (
         <div className='container'>
