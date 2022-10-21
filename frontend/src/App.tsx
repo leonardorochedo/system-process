@@ -1,12 +1,13 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 
-function App() {
+import { LoginPage } from './routes/LoginPage/LoginPage'
+import { RegisterPage } from './routes/RegisterPage/RegisterPage'
+
+export function App() {
   return (
     <>
-    <h1>Começando Projeto</h1>
+      {/* <LoginPage /> */}
+      <RegisterPage />
     </>
   )
 }
-
-export default App

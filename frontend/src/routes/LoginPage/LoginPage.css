@@ -1,0 +1,16 @@
+.form-container .actions {
+    height: 1rem;
+}
+
+.form-container .actions .register {
+    margin-top: -1.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container .actions .register p {
+    font-size: 12px;
+    font-style: italic;
+  
+    margin-bottom: .25rem;
+}
