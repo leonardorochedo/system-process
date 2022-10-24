@@ -1,29 +1,17 @@
-import { useState } from 'react'
+import React from 'react';
 
-import { LoginPage } from './routes/LoginPage/LoginPage'
-import { RegisterPage } from './routes/RegisterPage/RegisterPage'
+import { LoginPage } from './routes/LoginPage/LoginPage';
+import { RegisterPage } from './routes/RegisterPage/RegisterPage';
+import { Dashboard } from './routes/Dashboard/Dashboard';
 
 import './App.css'
 
 export function App() {
   return (
     <>
-      <div className="area" >
-        <ul className="circles">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div >
-      <LoginPage />
+      {/* <LoginPage /> */}
       {/* <RegisterPage /> */}
+      <Dashboard />
     </>
   )
 }

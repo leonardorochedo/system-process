@@ -4,6 +4,21 @@ import './LoginPage.css';
 
 export function LoginPage() {
     return (
+        <>
+        <div className="area" >
+        <ul className="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div >
         <div className='container'>
             <form action="" method='POST' className='form-container'>
                 <h1>Acessar Conta</h1>
@@ -24,5 +39,6 @@ export function LoginPage() {
                 </div>
             </form>
         </div>
+        </>
     )
 }

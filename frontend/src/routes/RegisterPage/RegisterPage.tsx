@@ -2,6 +2,21 @@ import React from 'react';
 
 export function RegisterPage() {
     return (
+        <>
+        <div className="area" >
+        <ul className="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div >
         <div className='container'>
             <form action="" method='POST' className='form-container'>
                 <h1>Cadastrar Usuário</h1>
@@ -22,5 +37,6 @@ export function RegisterPage() {
                 </div>
             </form>
         </div>
+        </>
     )
 }
