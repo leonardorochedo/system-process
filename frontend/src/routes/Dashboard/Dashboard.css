@@ -27,6 +27,7 @@ h1.title {
 
 .dashboard table tr td {
     border: 2px solid black;
+    border-radius: 5px;
 
     font-size: 12px;
 

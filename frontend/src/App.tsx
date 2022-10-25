@@ -9,9 +9,9 @@ import './App.css'
 export function App() {
   return (
     <>
-      {/* <LoginPage /> */}
+      <LoginPage />
       {/* <RegisterPage /> */}
-      <Dashboard />
+      {/* <Dashboard /> */}
     </>
   )
 }
