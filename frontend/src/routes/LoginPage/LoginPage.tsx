@@ -24,11 +24,11 @@ export function LoginPage() {
                 <h1>Acessar Conta</h1>
                 <div className='item-form'>
                     <label htmlFor="email">E-mail:</label>
-                    <input type="email" name='email' placeholder='Digite seu e-mail' />
+                    <input type="email" name='email' placeholder='Digite seu e-mail' required />
                 </div>
                 <div className='item-form'>
                     <label htmlFor="password">Senha:</label>
-                    <input type="password" name='password' placeholder='Digite sua senha' />
+                    <input type="password" name='password' placeholder='Digite sua senha' required />
                 </div>
                 <div className='actions actions-login'>
                     <div className='register'>
