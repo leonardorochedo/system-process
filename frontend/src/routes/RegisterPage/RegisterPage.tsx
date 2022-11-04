@@ -32,7 +32,11 @@ export function RegisterPage() {
                     <label htmlFor="password">Senha:</label>
                     <input type="password" name='password' placeholder='Digite sua senha' required />
                 </div>
-                <div className='actions'>
+                <div className='actions actions-login'>
+                    <div className='register'>
+                        <p>Já tem uma conta?</p>
+                        <button className='button'>Entrar</button>
+                    </div>
                     <input className='button' type="submit" value="Cadastrar" />
                 </div>
             </form>
