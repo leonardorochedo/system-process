@@ -82,3 +82,7 @@ body {
   display: flex;
   justify-content: space-around;
 }
+
+.form-container .register {
+  margin-top: -1.25rem;
+}
