@@ -4,8 +4,6 @@ import axios from "axios";
 
 import { useNavigate } from "react-router-dom";
 
-import React from "react";
-
 export function RegisterPage() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -25,6 +23,10 @@ export function RegisterPage() {
       .catch((err) => {
         console.log("Erro: " + err);
       });
+  }
+
+  function sendToLogin() {
+    navigate("/login");
   }
 
   return (
@@ -69,7 +71,9 @@ export function RegisterPage() {
           <div className="actions actions-login">
             <div className="register">
               <p>Já tem uma conta?</p>
-              <button className="button">Entrar</button>
+              <button onClick={sendToLogin} className="button">
+                Entrar
+              </button>
             </div>
             <input className="button" type="submit" value="Cadastrar" />
           </div>
