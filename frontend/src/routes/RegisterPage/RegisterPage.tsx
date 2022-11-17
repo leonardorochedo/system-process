@@ -2,12 +2,12 @@ import { useState } from "react";
 
 import axios from "axios";
 
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export function RegisterPage() {
-  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
+  const [message, setMessage] = useState("");
 
   // API
   const api = axios.create({
@@ -18,15 +18,11 @@ export function RegisterPage() {
     await api
       .post(`/add?email=${email}&senha=${senha}`)
       .then((response) => {
-        navigate("/dashboard");
+        setMessage('Cadastrado com sucesso!')
       })
       .catch((err) => {
-        console.log("Erro: " + err);
+        setMessage("Erro: " + err);
       });
-  }
-
-  function sendToLogin() {
-    navigate("/login");
   }
 
   return (
@@ -47,6 +43,7 @@ export function RegisterPage() {
       </div>
       <div className="container">
         <form onSubmit={registerUser} className="form-container">
+          <p className="message">{message}</p>
           <h1>Cadastrar Usuário</h1>
           <div className="item-form">
             <label htmlFor="email">E-mail:</label>
@@ -71,9 +68,9 @@ export function RegisterPage() {
           <div className="actions actions-login">
             <div className="register">
               <p>Já tem uma conta?</p>
-              <button onClick={sendToLogin} className="button">
-                Entrar
-              </button>
+              <Link to="/login" className="button btnAbout">
+              Clique Aqui
+              </Link>
             </div>
             <input className="button" type="submit" value="Cadastrar" />
           </div>
