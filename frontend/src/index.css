@@ -96,6 +96,6 @@ body {
 }
 
 .message {
-  margin: 1rem 0 -1rem 0;
-  color: green;
+  margin: 1rem 0 -1.35rem 0;
+  color: #2b74d3;
 }

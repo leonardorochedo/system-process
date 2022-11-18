@@ -2,27 +2,43 @@ import { useState } from "react";
 
 import axios from "axios";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export function RegisterPage() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [message, setMessage] = useState("");
 
+  const navigate = useNavigate()
+
   // API
   const api = axios.create({
     baseURL: "http://localhost:8080",
   });
 
-  async function registerUser() {
+  async function registerUser(e:any) {
+    e.preventDefault()
+
+  try {
     await api
       .post(`/add?email=${email}&senha=${senha}`)
       .then((response) => {
         setMessage('Cadastrado com sucesso!')
+        setInterval(() => {
+          setMessage("")
+          navigate('/dashboard')
+        }, 2000)
       })
       .catch((err) => {
-        setMessage("Erro: " + err);
+        setMessage("ERRO: " + err);
+        setInterval(() => {
+          setMessage("")
+        }, 2000)
       });
+  } catch (err) {
+    setMessage("ERRO: " + err);
+  }
+    
   }
 
   return (

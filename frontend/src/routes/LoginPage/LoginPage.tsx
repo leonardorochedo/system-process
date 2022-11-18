@@ -1,21 +1,60 @@
 import axios from "axios";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "./LoginPage.css";
 
 export function LoginPage() {
 
   const [message, setMessage] = useState("");
+  const [userAPI, setUserAPI] = useState({ email: "", senha: "" })
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+  const navigate = useNavigate()
 
   const api = axios.create({
     baseURL: "http://localhost:8080",
   });
 
-  async function loginUser() {
+  useEffect(() => {
+    api.get('/all')
+    .then((response) => {
+      setUserAPI({
+        email: response.data[0].email,
+        senha: response.data[0].senha
+      })
+    })
+    .catch((err) => {
+      console.log(`ERRRO: ${err}`)
+    })
+
+    console.log(userAPI)
+  }, [])
+
+  async function loginUser(e:any) {
+    e.preventDefault()
     // dar get no user e comparar os dados
+    if(!userAPI.email) {
+      setMessage("Não há usuários cadastrados")
+      return
+    }
+
+    if(userAPI.email !== email) {
+      setMessage("E-mail nao confere")
+      return
+    }
+
+    if(userAPI.senha !== senha) {
+      setMessage("Senha nao confere")
+      return
+    }
+
+    setMessage("Logado com sucesso!")
+    setInterval(() => {
+      navigate('/dashboard')
+    }, 2000)
   }
 
   return (
@@ -44,6 +83,7 @@ export function LoginPage() {
               type="email"
               name="email"
               placeholder="Digite seu e-mail"
+              onChange={(e) => setEmail(e.target.value)}
               required
               />
           </div>
@@ -53,6 +93,7 @@ export function LoginPage() {
               type="password"
               name="senha"
               placeholder="Digite sua senha"
+              onChange={(e) => setSenha(e.target.value)}
               required
               />
           </div>
