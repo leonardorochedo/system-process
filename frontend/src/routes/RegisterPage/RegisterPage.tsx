@@ -24,14 +24,14 @@ export function RegisterPage() {
       .post(`/add?email=${email}&senha=${senha}`)
       .then((response) => {
         setMessage('Cadastrado com sucesso!')
-        setInterval(() => {
+        setTimeout(() => {
           setMessage("")
-          navigate('/dashboard')
+          navigate('/login')
         }, 2000)
       })
       .catch((err) => {
         setMessage("ERRO: " + err);
-        setInterval(() => {
+        setTimeout(() => {
           setMessage("")
         }, 2000)
       });

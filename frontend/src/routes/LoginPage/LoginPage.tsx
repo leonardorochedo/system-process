@@ -42,17 +42,17 @@ export function LoginPage() {
     }
 
     if(userAPI.email !== email) {
-      setMessage("E-mail nao confere")
+      setMessage("E-mail não confere")
       return
     }
 
     if(userAPI.senha !== senha) {
-      setMessage("Senha nao confere")
+      setMessage("Senha não confere")
       return
     }
 
     setMessage("Logado com sucesso!")
-    setInterval(() => {
+    setTimeout(() => {
       navigate('/dashboard')
     }, 2000)
   }
