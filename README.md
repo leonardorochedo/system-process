@@ -1,7 +1,22 @@
 # Processos do Sistema
 
-Trabalho de Sistemas Operacionais!
+## Trabalho de Sistemas Operacionais!
 
-React + TypeScript + Spring
+Simular um Gerenciador de Tarefas que o usuário precise logar!
 
-Notion => https://www.notion.so/Sistemas-Operacionais-6b721178537947f687f02c7727201b35
+Para rodar em sua máquina:
+
+No diretório backend apenas acesse a main do projeto e de um 'run' que já vai começar a rodar o servidor.
+
+No diretório frontend rode
+```
+npm i
+```
+```
+npm run dev
+```
+
+E pronto o projeto estará rodando na URL que o VSCODE te dará!
+
+Tecnologias:
+React + TypeScript + SpringBoot
