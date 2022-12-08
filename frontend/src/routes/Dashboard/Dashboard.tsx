@@ -107,17 +107,27 @@ export function Dashboard() {
                         <td>9349</td>
                         <td>1</td>
                         <td>PowerPoint</td>
-                        <td>{processo2.cpu.toFixed(2)}%</td>
-                        <td>{processo2.ram.toFixed(2)}Mb</td>
-                        <td>{processo2.estado}</td>
+                        <td>0.00%</td>
+                        <td>0.00Mb</td>
+                        <td>
+                        {processo2.estado == "Em Execução"
+                        ? "ERRO de Interrupção!"
+                        : "Parado"
+                        }
+                        </td>
                     </tr>
                     <tr>
                         <td>4642</td>
                         <td>1</td>
                         <td>Chrome</td>
-                        <td>{processo3.cpu.toFixed(2)}%</td>
-                        <td>{processo3.ram.toFixed(2)}Mb</td>
-                        <td>{processo3.estado}</td>
+                        <td>0.00%</td>
+                        <td>0.00Mb</td>
+                        <td>
+                        {processo3.estado == "Em Execução"
+                        ? "ERRO de Exceção!"
+                        : "Parado"
+                        }
+                        </td>
                     </tr>
                     <tr>
                         <td>4983</td>
